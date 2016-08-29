@@ -1,9 +1,0 @@
-{
-  "name": "intercity.io site",
-  "description": "Intercity marketing and documentation site",
-  "scripts": {
-    "dokku": {
-      "predeploy": "bundle exec jekyll build"
-    }
-  }
-}
