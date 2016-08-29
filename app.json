@@ -3,7 +3,7 @@
   "description": "Intercity marketing and documentation site",
   "scripts": {
     "dokku": {
-      "postdeploy": "bundle exec jekyll build"
+      "predeploy": "bundle exec jekyll build"
     }
   }
 }

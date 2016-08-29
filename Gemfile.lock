@@ -43,6 +43,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ffi
   jekyll (= 3.2.1)
   puma
   rack-jekyll
