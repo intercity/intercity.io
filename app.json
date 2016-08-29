@@ -1,0 +1,9 @@
+{
+  "name": "intercity.io site",
+  "description": "Intercity marketing and documentation site",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec jekyll build"
+    }
+  }
+}
