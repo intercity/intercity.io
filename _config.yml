@@ -24,4 +24,3 @@ url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: intercityio
 github_username:  intercity
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'README.md']
-destination: "./www"
