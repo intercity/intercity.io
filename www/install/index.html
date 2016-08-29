@@ -12,6 +12,7 @@
   <title>Intercity</title>
 
   <link href="/css/toolkit-minimal.css" rel="stylesheet">
+  <link href="/css/intercity-io.css" rel="stylesheet">
   <script src="/js/jquery.min.js"></script>
   <script src="/js/toolkit.js"></script>
 </head>
@@ -59,46 +60,33 @@
     <div class="col-sm-3">
 
       <ul class="nav nav-bordered nav-stacked">
-        <li class="active"><a href="/install">Download &amp; Install</a></li>
+        <li class="active"><a href="/install">Install Intercity</a></li>
         <li ><a href="/install/setup.html">Setting things up</a></li>
       </ul>
 
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-9 docs-content">
 
-      <h1 class="m-t-0">Installing Intercity</h1>
+      <h1 class="m-t-0">Install Intercity</h1>
 
-<p>You can install the latest version of Intercity on your (cloud) server
-with a single-command installer script. This is the officially supported way
-of installing Intercity.</p>
+<p>Intercity is a webbased hosting and server management dashboard that runs on your own server. This page explains the official way of installation.</p>
 
-<p>The installer script installs the <code class="highlighter-rouge">intercity-server</code> command line tool. With
-this tool you can install and update Intercity installations on servers.</p>
+<h2 id="installling-intercity">Installling Intercity</h2>
 
-<p>Please follow the next steps to download, install and configure Intercity on
-your server of choice:</p>
-
-<h2 id="install-intercity-server-cli">Install Intercity Server CLI</h2>
-
-<p>Run the following command as root on your server. This will install the
-<code class="highlighter-rouge">intercity-server</code> command line tool.</p>
+<p>To install Intercity, you first need to download the <code class="highlighter-rouge">intercity-server</code> command line management tool on your server. SSH into your server and run the following command as root:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>curl https://raw.githubusercontent.com/intercity/intercity-server/master/scripts/installer | bash
 </code></pre>
 </div>
 
-<h2 id="install-and-start-intercity">Install and start Intercity</h2>
-
-<p>In the final output of the installer script, you’ll get instructed to run the
-following command to install and start Intercity itself:</p>
+<p>At the end of the output of this command, you see instructions to run the following command. This command will actually download and install the Intercity hosting management dashboard.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>source /root/.bashrc &amp;&amp; intercity-server install
 </code></pre>
 </div>
 
-<p>This command will return A LOT of output. In the end you’ll see something like
-this and you know what Intercity has been successfully installed and running!</p>
+<p>This command will return A LOT of output. In the end you’ll see something like this and you know what Intercity has been successfully installed and running!</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>---- Starting Intercity
 + /usr/bin/docker run -d --restart=always -e LANG=en_US.UTF-8 -e RAILS_ENV=production -e RACK_ENV=production -e DB_SOCKET=/var/run/postgresql -e DB_NAME=intercity -e SECRET_KEY_BASE=secret_key_base -e HOSTNAME=michiel.intercity.io -e LETSENCRYPT_ACCOUNT_EMAIL=example@example.com -h ubuntu-1gb-ams2-01-app -e DOCKER_HOST_IP= --name app -t -p 80:80 -p 2222:22 -p 443:443 -v /var/intercity/shared/:/shared -v /var/intercity/shared/log/var-log:/var/log local_intercity/app /sbin/boot
@@ -106,17 +94,15 @@ this and you know what Intercity has been successfully installed and running!</p
 </code></pre>
 </div>
 
-<h2 id="confirm-intercity-is-installed">Confirm Intercity is installed</h2>
+<h2 id="verifying-the-installation">Verifying the installation</h2>
 
-<p>Point your browser to http://yourserver.com/ and the following screen
-appears. This means that Intercity is running and ready to be configured via
-the first-run web interface.</p>
+<p>Point your browser to <strong>http://yourserver.com/</strong> or <strong>http://yourip/</strong> and the following screen appears. This means that Intercity is running and ready to be configured via the first-run web interface.</p>
 
 <p><img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive" /></p>
 
-<h2 id="next-up-setting-things-up">Next up: Setting things up</h2>
+<h2 id="next-step">Next step</h2>
 
-<p>Now that Intercity is running, continue to <a href="/install/setup.html">Setting things up →</a>.</p>
+<p>Now that Intercity is running, it is time to go through <a href="/install/setup.html">the initial setup steps</a>. Following these steps creates an initial user and configures sending email for notifications and password resets.</p>
 
 
     </div>

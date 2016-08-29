@@ -1,40 +1,27 @@
 ---
 layout: install
-title: Installing Intercity
+title: Install Intercity
 ---
 
-<h1 class="m-t-0">Installing Intercity</h1>
+<h1 class="m-t-0">Install Intercity</h1>
 
-You can install the latest version of Intercity on your (cloud) server
-with a single-command installer script. This is the officially supported way
-of installing Intercity.
+Intercity is a webbased hosting and server management dashboard that runs on your own server. This page explains the official way of installation.
 
-The installer script installs the `intercity-server` command line tool. With
-this tool you can install and update Intercity installations on servers.
+## Installling Intercity
 
-Please follow the next steps to download, install and configure Intercity on
-your server of choice:
-
-## Install Intercity Server CLI
-
-Run the following command as root on your server. This will install the
-`intercity-server` command line tool.
+To install Intercity, you first need to download the `intercity-server` command line management tool on your server. SSH into your server and run the following command as root:
 
 ```
 curl https://raw.githubusercontent.com/intercity/intercity-server/master/scripts/installer | bash
 ```
 
-## Install and start Intercity
-
-In the final output of the installer script, you'll get instructed to run the
-following command to install and start Intercity itself:
+At the end of the output of this command, you see instructions to run the following command. This command will actually download and install the Intercity hosting management dashboard.
 
 ```
 source /root/.bashrc && intercity-server install
 ```
 
-This command will return A LOT of output. In the end you'll see something like
-this and you know what Intercity has been successfully installed and running!
+This command will return A LOT of output. In the end you'll see something like this and you know what Intercity has been successfully installed and running!
 
 ```
 ---- Starting Intercity
@@ -42,14 +29,12 @@ this and you know what Intercity has been successfully installed and running!
 ---- Done
 ```
 
-## Confirm Intercity is installed
+## Verifying the installation
 
-Point your browser to http://yourserver.com/ and the following screen
-appears. This means that Intercity is running and ready to be configured via
-the first-run web interface.
+Point your browser to **http://yourserver.com/** or **http://yourip/** and the following screen appears. This means that Intercity is running and ready to be configured via the first-run web interface.
 
 <img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive">
 
-## Next up: Setting things up
+## Next step
 
-Now that Intercity is running, continue to [Setting things up &rarr;](/install/setup.html).
+Now that Intercity is running, it is time to go through [the initial setup steps](/install/setup.html). Following these steps creates an initial user and configures sending email for notifications and password resets.
