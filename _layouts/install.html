@@ -13,9 +13,9 @@
 
     <div class="col-sm-3">
 
-      <ul class="nav nav-pills nav-stacked">
-        <li role="presentation" class="active"><a href="/install"><span class="icon icon-chevron-right"></span> Download & Install</a></li>
-        <li role="presentation"><a href="#"><span class="icon icon-chevron-right"></span> Initial configuration</a></li>
+      <ul class="nav nav-bordered nav-stacked">
+        <li {% if page.path == "install/index.md" %}class="active"{% endif %}><a href="/install">Download &amp; Install</a></li>
+        <li {% if page.path == "install/setup.md" %}class="active"{% endif %}><a href="/install/setup.html">Setting things up</a></li>
       </ul>
 
     </div>

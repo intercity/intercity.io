@@ -58,9 +58,9 @@
 
     <div class="col-sm-3">
 
-      <ul class="nav nav-pills nav-stacked">
-        <li role="presentation" class="active"><a href="/install"><span class="icon icon-chevron-right"></span> Download & Install</a></li>
-        <li role="presentation"><a href="#"><span class="icon icon-chevron-right"></span> Initial configuration</a></li>
+      <ul class="nav nav-bordered nav-stacked">
+        <li class="active"><a href="/install">Download &amp; Install</a></li>
+        <li ><a href="/install/setup.html">Setting things up</a></li>
       </ul>
 
     </div>
@@ -73,16 +73,50 @@
 with a single-command installer script. This is the officially supported way
 of installing Intercity.</p>
 
-<p>The installer script downloads and configures Intercity for first use. After
-installing via the script, you can perform initial setup steps in the web
-interface of your own Intercity installation.</p>
+<p>The installer script installs the <code class="highlighter-rouge">intercity-server</code> command line tool. With
+this tool you can install and update Intercity installations on servers.</p>
 
-<p>To install Intercity on your server, just SSH into your server as a root user
-and execute the following command:</p>
+<p>Please follow the next steps to download, install and configure Intercity on
+your server of choice:</p>
+
+<h2 id="install-intercity-server-cli">Install Intercity Server CLI</h2>
+
+<p>Run the following command as root on your server. This will install the
+<code class="highlighter-rouge">intercity-server</code> command line tool.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>curl https://raw.githubusercontent.com/intercity/intercity-server/master/scripts/installer | bash
 </code></pre>
 </div>
+
+<h2 id="install-and-start-intercity">Install and start Intercity</h2>
+
+<p>In the final output of the installer script, you’ll get instructed to run the
+following command to install and start Intercity itself:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>source /root/.bashrc &amp;&amp; intercity-server install
+</code></pre>
+</div>
+
+<p>This command will return A LOT of output. In the end you’ll see something like
+this and you know what Intercity has been successfully installed and running!</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>---- Starting Intercity
++ /usr/bin/docker run -d --restart=always -e LANG=en_US.UTF-8 -e RAILS_ENV=production -e RACK_ENV=production -e DB_SOCKET=/var/run/postgresql -e DB_NAME=intercity -e SECRET_KEY_BASE=secret_key_base -e HOSTNAME=michiel.intercity.io -e LETSENCRYPT_ACCOUNT_EMAIL=example@example.com -h ubuntu-1gb-ams2-01-app -e DOCKER_HOST_IP= --name app -t -p 80:80 -p 2222:22 -p 443:443 -v /var/intercity/shared/:/shared -v /var/intercity/shared/log/var-log:/var/log local_intercity/app /sbin/boot
+---- Done
+</code></pre>
+</div>
+
+<h2 id="confirm-intercity-is-installed">Confirm Intercity is installed</h2>
+
+<p>Point your browser to http://yourserver.com/ and the following screen
+appears. This means that Intercity is running and ready to be configured via
+the first-run web interface.</p>
+
+<p><img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive" /></p>
+
+<h2 id="next-up-setting-things-up">Next up: Setting things up</h2>
+
+<p>Now that Intercity is running, continue to <a href="/install/setup.html">Setting things up →</a>.</p>
 
 
     </div>
