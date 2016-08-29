@@ -14,5 +14,5 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 baseurl: "" # the subpath of your site, e.g. /blog
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'README.md', 'Procfile', 'app.json']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'README.md', 'Dockerfile', 'nginx.conf']
 destination: "./www"
