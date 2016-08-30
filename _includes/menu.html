@@ -19,7 +19,7 @@
         <li {% if page.path == "tour/index.html" %}class="active"{% endif %} >
           <a href="/tour">Tour</a>
         </li>
-        <li {% if page.path == "docs/index.md" %}class="active"{% endif %}>
+        <li {% if page.path contains "docs" %}class="active"{% endif %}>
           <a href="/docs">Docs</a>
         </li>
         <li {% if page.path == "support/index.md" %}class="active"{% endif %}  >
