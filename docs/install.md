@@ -37,4 +37,4 @@ Point your browser to **http://yourserver.com/** or **http://yourip/** and the f
 
 ## Next step
 
-Now that Intercity is running, it is time to go through [the initial setup steps](/install/setup.html). Following these steps creates an initial user and configures sending email for notifications and password resets.
+Now that Intercity is running, it is time to go through [the initial setup steps](/docs/initial-setup.html). Following these steps creates an initial user and configures sending email for notifications and password resets.
