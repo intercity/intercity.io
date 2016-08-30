@@ -41,7 +41,7 @@
         <li  >
           <a href="/tour">Tour</a>
         </li>
-        <li class="active">
+        <li >
           <a href="/docs">Docs</a>
         </li>
         <li   >
@@ -60,11 +60,11 @@
     <div class="col-sm-3">
 
       <ul class="nav nav-bordered nav-stacked">
-        <li class="active"><a href="/docs">Introduction</a></li>
+        <li ><a href="/docs">Introduction</a></li>
         <li class="nav-divider"></li>
         <li class="nav-header">Installation</li>
         <li ><a href="/docs/install.html">Install Intercity</a></li>
-        <li ><a href="/docs/initial-setup.html">Initial setup</a></li>
+        <li class="active"><a href="/docs/initial-setup.html">Initial setup</a></li>
         <li class="nav-divider"></li>
         <li class="nav-header">Getting started</li>
         <li><a href="#">Install a server</a></li>
@@ -78,15 +78,33 @@
 
     <div class="col-sm-9 docs-content">
 
-      <h1 class="m-t-0">Introduction to Intercity</h1>
+      <h1 class="m-t-0">Initial setup</h1>
 
-<p>Intercity is a hosting management dashboard that lets you manage (cloud) servers and deploy Ruby on Rails, Python, Node.js and PHP apps.</p>
+<p>After <a href="/docs/index.html">installing and starting Intercity</a>, you need to perform two initial tasks before you can add your first (cloud) server or VPS. This page will guide you through those steps.</p>
 
-<p>Unlike a Platform as a Service (like <a href="https://heroku.com">Heroku</a>), you install an Intercity instance on a seperate server. You then use that Intercity instance to configure and deploy apps on other servers in your infrastructure. This means that a simple setup always consists of at least two servers: one runs your Intercity instance and one or more other servers host your apps.</p>
+<h2 id="creating-the-first-user">Creating the first user</h2>
+
+<p>Intercity is a multi-user system so you need to create the first user to get started. After the first user is created, you can add as many users as you like. This is very useful when you’re working in a team. Every team member has their own login.</p>
+
+<p>The first user can be created by filling out the form that is displayed right after installing and starting Intercity. Just point your browser to the hostname or ip address of the server where you’ve installed Intercity and you’ll see this screen:</p>
+
+<p><img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive" /></p>
+
+<p>Enter your email and choose a password and continue to the next step.</p>
+
+<h2 id="configuring-sending-email">Configuring sending email</h2>
+
+<p>It’s important that your Intercity dashboard can send emails. This way your users can request password resets and receive important notifications like security updates or app monitoring messages.</p>
+
+<p>Right after creating the first user, you’ll see the following screen:</p>
+
+<p><img src="/images/settings@2x.png" class="img-responsive" /></p>
+
+<p>On this screen, enter an email address that you want Intercity to use as sending email address. You MUST enter valid SMTP settings if you want actual email delivery to work. If you don’t have an SMTP server, get one via <a href="https://mailgun.com">Mailgun</a> or <a href="https://postmark.com">Postmark</a>.</p>
 
 <h2 id="next-steps">Next steps</h2>
 
-<p>Ready to get started with Intercity? Start on the <a href="/docs/install.html">Install Intercity</a> page. If you’re interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the <a href="/docs/install-server.html">Install a server</a> page.</p>
+<p>You’re now finished with your Intercity instance’s setup. It’s now time to deploy some apps! First, use Intercity to <a href="/docs/install-server.html">install a cloud server or VPS</a>. After your server is set up, you can deploy one or multiple apps.</p>
 
 
     </div>
