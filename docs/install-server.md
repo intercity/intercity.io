@@ -18,8 +18,16 @@ A dialog form shows up where you can enter a name and the IP address or hostname
 
 A new screen appears that shows that your Intercity instance is polling for an SSH key to be present on your app server. You now need to copy and paste the shown SSH key into the /root/.ssh/authorized_keys file on your app server.
 
+<img src="/images/docs-ssh-check@2x.png" class="img-responsive">
+
 Once Intercity has confirmed it has access to your server, you can proceed to the server installation step. In the next step your server will be properly configured to host apps.
 
 ## Installing your server...
 
 Intercity is now showing you it's progress to configure your app server. It will install all the required software for you to host and deploy your apps. You don't have to do a thing. Once the four setup steps are completed, you can continue.
+
+<img src="/images/docs-server-setup@2x.png" class="img-responsive">
+
+## Next steps
+
+When Intercity has completed the setup of your app server, you can go ahead and [add your first app](/docs/add-app.html). What are you waiting for?!

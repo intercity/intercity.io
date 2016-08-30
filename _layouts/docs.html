@@ -22,7 +22,7 @@
         <li class="nav-divider"></li>
         <li class="nav-header">Getting started</li>
         <li {% if page.path == "docs/install-server.md" %}class="active"{% endif %}><a href="/docs/install-server.html">Install a server</a></li>
-        <li><a href="#">Add an app</a></li>
+        <li {% if page.path == "docs/add-app.md" %}class="active"{% endif %}><a href="/docs/add-app.html">Add an app</a></li>
         <li><a href="#">Configure domain name</a></li>
         <li><a href="#">Add a database</a></li>
         <li><a href="#">Deploy your app</a></li>
