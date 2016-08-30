@@ -15,7 +15,7 @@ To install Intercity, you first need to download the `intercity-server` command 
 curl https://raw.githubusercontent.com/intercity/intercity-server/master/scripts/installer | bash
 ```
 
-At the end of the output of this command, you see instructions to run the following command. This command will actually download and install the Intercity hosting management dashboard.
+Now run the following command to install Intercity:
 
 ```
 source /root/.bashrc && intercity-server install
