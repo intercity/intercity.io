@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Intercity is a hosting management dashboard.">
+  <meta name="keywords" content="web apps, hosting, dashboard, control panel">
+  <meta name="author" content="Firmhouse">
+
+  <title>Intercity</title>
+
+  <link href="/css/toolkit-minimal.css" rel="stylesheet">
+  <link href="/css/intercity-io.css" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/toolkit.js"></script>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../">
+        <span>Intercity.io</span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+          <a href="/">Home</a>
+        </li>
+        <li  >
+          <a href="/tour">Tour</a>
+        </li>
+        <li class="active">
+          <a href="/docs">Docs</a>
+        </li>
+        <li   >
+          <a href="/support">Get Support</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-3">
+
+      <ul class="nav nav-bordered nav-stacked">
+        <li ><a href="/docs">Introduction</a></li>
+        <li class="nav-divider"></li>
+        <li class="nav-header">Installation</li>
+        <li ><a href="/docs/install.html">Install Intercity</a></li>
+        <li ><a href="/docs/initial-setup.html">Initial setup</a></li>
+        <li class="nav-divider"></li>
+        <li class="nav-header">Getting started</li>
+        <li ><a href="/docs/install-server.html">Install a server</a></li>
+        <li ><a href="/docs/add-app.html">Add an app</a></li>
+        <li ><a href="/docs/configure-domain-name.html">Configure domain name</a></li>
+        <li class="active"><a href="/docs/add-database.html">Add a database</a></li>
+        <li><a href="#">Add your deploy key</a></li>
+        <li><a href="#">Deploy your app</a></li>
+      </ul>
+
+    </div>
+
+    <div class="col-sm-9 docs-content">
+
+      <h1 class="m-t-0">Add a database</h1>
+
+<p>So your server is set up, you added an app and configured it’s domain name. Before we can deploy your app, we need to do two final things: add a database and add your deploy key to the server.</p>
+
+<p>Unless you’re making a static site, you probably want to enable one or more databases for your app. For example PostgreSQL or MySQL. But it’s also possible you need some additional service like Redis or Memcached. With Intercity, that’s as easy as two button clicks.</p>
+
+<p>Intercity works with the concept of “services”. A service can be any piece of software around your app. In the following sample, enabling a PostgreSQL database is done by “linking” that service to your app.</p>
+
+<p>This page will show how to enable a PostgreSQL server and database for your app. Intercity will take care of everything, from installing a PostgreSQL server to generating a database and credentials.</p>
+
+<h2 id="installing-postgresql">Installing PostgreSQL</h2>
+
+<p>First, install the PostgreSQL server on the server. Go into the app’s “Linked Services” tab. You’ll see the following screen if you haven’t already added any services yet:</p>
+
+<p><img src="/images/docs-app-no-services@2x.png" class="img-responsive img-thumbnail" /></p>
+
+<p>The screen tells you that there aren’t any services installed on your server yet. Let’s do that now. Click the “Install a service” button and you’ll switch to the “Services” tab of your app server configuration:</p>
+
+<p><img src="/images/docs-server-services@2x.png" class="img-responsive img-thumbnail" /></p>
+
+<p>To install PostgreSQL on your server, click “Install Postgres” and the button will change into a label “Installing”. After about a minute, the label will change to “Installed”. This means that PostgreSQL is ready to be linked to an app.</p>
+
+<h2 id="enabling-postgresql-for-your-app">Enabling PostgreSQL for your app</h2>
+
+<p>Go back to your app server’s “Apps” overview and go into your app. Once more, open the “Linked Services” tab. You’ll now see a “PostgresSQL” widget with a button “Link Postgres”. Click that button to link a PostgreSQL database for your app.</p>
+
+<p><img src="/images/docs-app-services@2x.png" class="img-responsive img-thumbnail" /></p>
+
+<p>After linking, Intercity will expose a <code class="highlighter-rouge">DATABASE_URL</code> environment variable to your app. This environment variable contains the connection string to connect your app to a database. A lot of web development frameworks - like Ruby on Rails - pick this setting up automatically, so you don’t have make any change to your code.</p>
+
+<h2 id="next-step">Next step</h2>
+
+<p>If you’re building a Ruby on Rails app, you’re all set to finish the final step for deploying. If you’re using a different framework, check out it’s documentation to make use of the <code class="highlighter-rouge">DATABASE_URL</code> environment variable.</p>
+
+<p>The final step before deploying, is <a href="/docs/add-deploy-key.html">adding your deploy key</a> to the server.</p>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
