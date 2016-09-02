@@ -15,6 +15,7 @@
   <link href="/css/intercity-io.css" rel="stylesheet">
   <script src="/js/jquery.min.js"></script>
   <script src="/js/toolkit.js"></script>
+  <script src="/js/mixpanel.js"></script>
 </head>
 
 
@@ -97,6 +98,8 @@
   </div>
 
 </div>
-
+  <script>
+    mixpanel.track("Visit docs/add-app.md")
+  </script>
 </body>
 </html>
