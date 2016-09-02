@@ -37,3 +37,9 @@ $ git push dokku master
 ```
 
 Dokku, the underlying system that Intercity uses to deploy your apps, will now take care of updating your code, running database migrations, do asset compilation and perform a rolling restart of your app.
+
+After the `git push` finishes, just browse to the domain name of your app and it should be available.
+
+## Further information
+
+This is the end of this Getting Started guide. If you have any questions or issues with the use of Intercity, please [open an issue on Github](https://github.com/intercity/intercity-next).
