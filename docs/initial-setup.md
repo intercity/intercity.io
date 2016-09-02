@@ -29,4 +29,4 @@ On this screen, enter an email address that you want Intercity to use as sending
 
 ## Next steps
 
-You're now finished with your Intercity instance's setup. It's now time to deploy some apps! First, use Intercity to [install a cloud server or VPS](/docs/install-server.html). After your server is set up, you can deploy one or multiple apps.
+You're now finished with your Intercity instance's setup. It's now time to deploy some apps! First, use Intercity to **[install a cloud server or VPS](/docs/install-server.html)**. After your server is set up, you can deploy one or multiple apps.

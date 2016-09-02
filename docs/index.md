@@ -22,4 +22,4 @@ Intercity tightly integrates with [Dokku](https://github.com/dokku/dokku) under 
 
 ## Next steps
 
-Ready to get started with Intercity? Start on the [Install Intercity](/docs/install.html) page. If you're interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the [Install a server](/docs/install-server.html) page.
+Ready to get started with Intercity? Start on the **[Install Intercity](/docs/install.html)** page. If you're interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the **[Install a server](/docs/install-server.html)** page.
