@@ -1,3 +1,11 @@
-FROM nginx
+FROM intercity/nginx-jekyll-static-site
+COPY Gemfile* /tmp/
+WORKDIR /tmp
+RUN bundle install
+
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY www /usr/share/nginx/html
+
+RUN mkdir /source
+WORKDIR /source
+ADD . /source
+RUN bundle exec jekyll build --destination /usr/share/nginx/html
