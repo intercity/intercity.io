@@ -58,9 +58,9 @@
   <h1 class="block-title">Intercity</h1>
   <h3>Get your apps up and running in no time.</h3>
   <h4>A server management dashboard for hosting apps.</h4>
-  <p><a href="/docs" class="btn btn-pill btn-lg btn-primary m-t">Install right now</a><br>
-  <a href="/tour" class="btn btn-pill btn-lg btn-success m-t">See how Intercity works</a><br>
-  <button class="btn btn-pill btn-default btn-lg m-t">Read the getting started guide</button></p>
+  <p><a href="/docs" class="btn btn-pill btn-lg btn-primary m-t" data-role="install-now">Install right now</a><br>
+  <a href="/tour" class="btn btn-pill btn-lg btn-success m-t" data-role="how-it-works">See how Intercity works</a><br>
+  <button class="btn btn-pill btn-default btn-lg m-t" data-role="read-getting-started">Read the getting started guide</button></p>
 </div>
 <div class="block text-center p-t-md">
   <div class="container">
@@ -70,7 +70,16 @@
 
 
 <script>
-  mixpanel.track("Visit index.html")
+  mixpanel.track("Visit index.html");
+  $("[data-role='install-now']").on("click", function() {
+    mixpanel.track("Install now button clicked");
+  });
+  $("[data-role='how-it-works']").on("click", function() {
+    mixpanel.track("How it works button clicked");
+  });
+  $("[data-role='read-getting-started']").on("click", function() {
+    mixpanel.track("Read the getting started guide button clicked");
+  });
 </script>
 </body>
 </html>
