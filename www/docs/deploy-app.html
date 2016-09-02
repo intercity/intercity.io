@@ -71,35 +71,49 @@
         <li ><a href="/docs/add-app.html">Add an app</a></li>
         <li ><a href="/docs/configure-domain-name.html">Configure domain name</a></li>
         <li ><a href="/docs/add-database.html">Add a database</a></li>
-        <li class="active"><a href="/docs/add-deploy-key.html">Add deploy key</a></li>
-        <li ><a href="/docs/deploy-app.html">Deploy your app</a></li>
+        <li ><a href="/docs/add-deploy-key.html">Add deploy key</a></li>
+        <li class="active"><a href="/docs/deploy-app.html">Deploy your app</a></li>
       </ul>
 
     </div>
 
     <div class="col-sm-9 docs-content">
 
-      <h1 class="m-t-0">Add deploy key</h1>
+      <h1 class="m-t-0">Deploy your app</h1>
 
-<p>Almost there! We’ve installed a server, created an app, configured a domain name for it and enabled a database server. All with just entering some forms, waiting a few minutes and clicking a few buttons. All we need to do before deploying, is give your workstation access to the server so it can deploy via <code class="highlighter-rouge">git push</code>.</p>
+<p>Awesome, you’re at the final step. With Intercity, you’ve installed your app server, added your app, configured its domain name, enabled PostgreSQL and added your deploy to key. It’s now time to deploy your app with an easy git push.</p>
 
-<h2 id="adding-your-key">Adding your key</h2>
+<h2 id="adding-the-git-remote">Adding the git remote</h2>
 
-<p>In the Intercity dashboard, browse to your app server and click the “Deploy Keys” tab. This will show you the following page:</p>
+<p>Every app hosted with Intercity has its own unique deploy URL. You can find the deploy URL on the Info tab of an app in your Intercity instance.</p>
 
-<p><img src="/images/docs-server-deploy-keys@2x.png" class="img-responsive img-thumbnail" /></p>
+<p><img src="/images/docs-app-info-deploy-url@2x.png" class="img-responsive img-thumbnail" /></p>
 
-<p>In the form on the right of this page, enter a name for your current workstation in the first field. For example: “Michiel’s MacBook Pro”. In the larger “SSH Key” field, copy and paste the contents of your <code class="highlighter-rouge">~/.ssh/id_rsa.pub</code>.</p>
+<p>Add that URL as a remote called “dokku” to the Git repository of your app’s code:</p>
 
-<p>If you’re on a Mac, you can do this by running the following command in your terminal:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ cat ~/.ssh/id_rsa.pub | pbcopy
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add dokku dokku@95.85.28.175:my-app
 </code></pre>
 </div>
 
-<p>Paste inside the “SSH Key” field and click “Create new deploy key”.</p>
+<h2 id="enabling-migrations-on-deploy">Enabling migrations on deploy</h2>
 
-<p>Your Intercity instance will now give your machine access to deploy to your app server. Let’s <strong><a href="/docs/deploy-your-app.html">go ahead and deploy</a></strong>!</p>
+<p>If you’re deploying a Ruby on Rails app, you probably want your database migrations to be run on every deploy. You can do this by creating a file <code class="highlighter-rouge">lib/tasks/run_migrations.rake</code> in your Rails project with the following content:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Rake::Task['assets:clean'].enhance do
+  Rake::Task['db:migrate'].invoke
+end
+</code></pre>
+</div>
+
+<h2 id="deploying-your-app">Deploying your app</h2>
+
+<p>Let’s deploy the app! Commit all your recent changes that you want to deploy and run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git push dokku master
+</code></pre>
+</div>
+
+<p>Dokku, the underlying system that Intercity uses to deploy your apps, will now take care of updating your code, running database migrations, do asset compilation and perform a rolling restart of your app.</p>
 
 
     </div>
