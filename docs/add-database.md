@@ -36,4 +36,4 @@ After linking, Intercity will expose a `DATABASE_URL` environment variable to yo
 
 If you're building a Ruby on Rails app, you're all set to finish the final step for deploying. If you're using a different framework, check out it's documentation to make use of the `DATABASE_URL` environment variable.
 
-The final step before deploying, is [adding your deploy key](/docs/add-deploy-key.html) to the server.
+The final step before deploying, is **[adding your deploy key](/docs/add-deploy-key.html)** to the server.

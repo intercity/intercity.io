@@ -16,6 +16,10 @@ Having your own Intercity instance on your own server has lots of benefits. We t
 * Much cheaper because you pay per server, instead of per app, worker or plugin.
 * Run multiple apps on one server, without extra costs.
 
+## Dokku integration
+
+Intercity tightly integrates with [Dokku](https://github.com/dokku/dokku) under the hood. Dokku is the underlying system that allows deploying your apps. The benefit of this integration is that any app that you are able to deploy on [Heroku](https://heroku.com), should also work on your Intercity/Dokku-managed server.
+
 ## Next steps
 
-Ready to get started with Intercity? Start on the [Install Intercity](/docs/install.html) page. If you're interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the [Install a server](/docs/install-server.html) page.
+Ready to get started with Intercity? Start on the **[Install Intercity](/docs/install.html)** page. If you're interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the **[Install a server](/docs/install-server.html)** page.

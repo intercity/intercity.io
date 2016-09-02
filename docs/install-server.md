@@ -30,4 +30,4 @@ Intercity is now showing you it's progress to configure your app server. It will
 
 ## Next steps
 
-When Intercity has completed the setup of your app server, you can go ahead and [add your first app](/docs/add-app.html). What are you waiting for?!
+When Intercity has completed the setup of your app server, you can go ahead and **[add your first app](/docs/add-app.html)**. What are you waiting for?!

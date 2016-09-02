@@ -12,4 +12,4 @@ Just click the "New app" button, enter your app's name and you're good to go! In
 
 ## Next Step
 
-After creating the app, it will appear on your app server's Apps overview screen. As you can see, there's not a domain name configured for your app yet. Let's go ahead and [configure a domain name for your app](/docs/configure-domain-name.html).
+After creating the app, it will appear on your app server's Apps overview screen. As you can see, there's not a domain name configured for your app yet. Let's go ahead and **[configure a domain name for your app](/docs/configure-domain-name.html)**.

@@ -20,4 +20,4 @@ To the right you see the "Add a new domain" form. Enter the domain name that you
 
 ## Next steps
 
-Before deploying, you need to point the domain name's A and/or AAAA records to the IP of your app server. But first, we'll take a look at [adding a database](/docs/add-a-database.html) to your app.
+Before deploying, you need to point the domain name's A and/or AAAA records to the IP of your app server. But first, we'll take a look at **[adding a database](/docs/add-a-database.html)** to your app.
