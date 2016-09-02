@@ -60,7 +60,7 @@
     <div class="col-sm-3">
 
       <ul class="nav nav-bordered nav-stacked">
-        <li class="active"><a href="/docs">Introduction</a></li>
+        <li ><a href="/docs">Introduction</a></li>
         <li class="nav-divider"></li>
         <li class="nav-header">Installation</li>
         <li ><a href="/docs/install.html">Install Intercity</a></li>
@@ -71,7 +71,7 @@
         <li ><a href="/docs/add-app.html">Add an app</a></li>
         <li ><a href="/docs/configure-domain-name.html">Configure domain name</a></li>
         <li ><a href="/docs/add-database.html">Add a database</a></li>
-        <li ><a href="/docs/add-deploy-key.html">Add deploy key</a></li>
+        <li class="active"><a href="/docs/add-deploy-key.html">Add deploy key</a></li>
         <li><a href="#">Deploy your app</a></li>
       </ul>
 
@@ -79,25 +79,27 @@
 
     <div class="col-sm-9 docs-content">
 
-      <h1 class="m-t-0">Introduction to Intercity</h1>
+      <h1 class="m-t-0">Add deploy key</h1>
 
-<p>Intercity is a webbased hosting management dashboard that lets you manage (cloud) servers and deploy Ruby on Rails, Python, Node.js and PHP apps. To some extend, you can compare it to Plesk, DirectAdmin or CPanel.</p>
+<p>Almost there! We’ve installed a server, created an app, configured a domain name for it and enabled a database server. All with just entering some forms, waiting a few minutes and clicking a few buttons. All we need to do before deploying, is give your workstation access to the server so it can deploy via <code class="highlighter-rouge">git push</code>.</p>
 
-<p>Unlike a Platform as a Service (like <a href="https://heroku.com">Heroku</a>), you install an Intercity instance on a seperate server. You then use that Intercity instance to configure and deploy apps on other servers in your infrastructure. This means that a simple setup always consists of at least two servers: one runs your Intercity instance and one or more other servers host your apps.</p>
+<h2 id="adding-your-key">Adding your key</h2>
 
-<p>Having your own Intercity instance on your own server has lots of benefits. We think these are the most important ones:</p>
+<p>In the Intercity dashboard, browse to your app server and click the “Deploy Keys” tab. This will show you the following page:</p>
 
-<ul>
-  <li>Sensitive data (API keys, credentials, backups) is stored on a server you control and that only you have access to.</li>
-  <li>Easily installed on-premise or your own workstation. (You could even install Intercity on a Raspberry Pi and take it with you!)</li>
-  <li>Conform to regulations or compliancy rules of your company or your client.</li>
-  <li>Much cheaper because you pay per server, instead of per app, worker or plugin.</li>
-  <li>Run multiple apps on one server, without extra costs.</li>
-</ul>
+<p><img src="/images/docs-server-deploy-keys@2x.png" class="img-responsive img-thumbnail" /></p>
 
-<h2 id="next-steps">Next steps</h2>
+<p>In the form on the right of this page, enter a name for your current workstation in the first field. For example: “Michiel’s MacBook Pro”. In the larger “SSH Key” field, copy and paste the contents of your <code class="highlighter-rouge">~/.ssh/id_rsa.pub</code>.</p>
 
-<p>Ready to get started with Intercity? Start on the <a href="/docs/install.html">Install Intercity</a> page. If you’re interested in seeing how you use your own Intercity instance to deploy your apps, take a look at the <a href="/docs/install-server.html">Install a server</a> page.</p>
+<p>If you’re on a Mac, you can do this by running the following command in your terminal:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cat ~/.ssh/id_rsa.pub | pbcopy
+</code></pre>
+</div>
+
+<p>Paste inside the “SSH Key” field and click “Create new deploy key”.</p>
+
+<p>Your Intercity instance will now give your machine access to deploy to your app server. Let’s <strong><a href="/docs/deploy-your-app.html">go ahead and deploy</a></strong>!</p>
 
 
     </div>
