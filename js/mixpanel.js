@@ -7,6 +7,7 @@ for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElemen
   function MixPanelMock() {
     this.track = function(_){ return true; }
     this.alias = function(_){ return true; }
+    this.track_links = function(_){ console.log(_); return true; }
   }
   window.mixpanel = new MixPanelMock();
 }
