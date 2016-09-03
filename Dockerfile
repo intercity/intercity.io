@@ -8,4 +8,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN mkdir /source
 WORKDIR /source
 ADD . /source
-RUN bundle exec jekyll build --destination /usr/share/nginx/html
+RUN JEKYLL_ENV=production bundle exec jekyll build --destination /usr/share/nginx/html
