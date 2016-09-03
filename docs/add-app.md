@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Add an app - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Add an app</h1>

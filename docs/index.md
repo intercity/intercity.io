@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Introduction to Intercity - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Introduction to Intercity</h1>

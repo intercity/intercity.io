@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Setting things up"
+title: "Initial setup - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Initial setup</h1>

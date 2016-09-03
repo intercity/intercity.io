@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Add a database - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Add a database</h1>
