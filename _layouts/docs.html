@@ -42,7 +42,10 @@
 </div>
 
 <script>
-  mixpanel.track("Visit {{ page.path }}")
+  mixpanel.track("page viewed", {
+    'page name' : document.title,
+    'url' : window.location.pathname
+  })
 </script>
 
 </body>
