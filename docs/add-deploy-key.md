@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Add deploy key - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Add deploy key</h1>

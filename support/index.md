@@ -1,4 +1,4 @@
 ---
 layout: support
-title: Get help using Intercity
+title: "Intercity Support"
 ---

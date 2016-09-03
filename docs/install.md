@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Install Intercity
+title: "Install Intercity - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Install Intercity</h1>

@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Configure a domain name - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Configure a domain name</h1>

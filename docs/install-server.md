@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Install a server - Intercity Documentation"
 ---
 
 <h1 class="m-t-0">Install a server</h1>
