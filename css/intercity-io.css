@@ -1,3 +1,7 @@
 .docs-content {
   font-size: 16px;
 }
+
+.support-option .panel-body {
+  min-height: 280px;
+}
