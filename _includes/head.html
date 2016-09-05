@@ -4,7 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Intercity is a hosting management dashboard.">
   <meta name="keywords" content="web apps, hosting, dashboard, control panel">
-  <meta name="author" content="Firmhouse">
+  <meta name="author" content="Firmhouse BV">
+
+  {% if page.noindex %}
+  <meta name="robots" content="none">
+  {% endif %}
 
   <title>{{page.title}}</title>
 
