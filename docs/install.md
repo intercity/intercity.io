@@ -33,7 +33,7 @@ This command will return A LOT of output. In the end you'll see something like t
 
 Point your browser to **http://yourserver.com/** or **http://yourip/** and the following screen appears. This means that Intercity is running and ready to be configured via the first-run web interface.
 
-<img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive">
+<img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive img-thumbnail">
 
 ## Next step
 
