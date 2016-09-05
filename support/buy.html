@@ -1,6 +1,6 @@
 ---
 layout: support
-title: "Intercity Plans and Pricing"
+title: "Buy a Pro Support License for Intercity"
 ---
 
 <div class="block text-xs-center p-t-0 p-b-md">
@@ -14,6 +14,12 @@ title: "Intercity Plans and Pricing"
       <div class="panel panel-default">
         <div class="panel-body">
           <form action="https://formbox.es/Q9mSR6s6Wf9capk3pGCLUtno" method="post">
+            {% if jekyll.environment == "production" %}
+              <input type="hidden" name="return_to" value="https://intercity.io/support/thank-you.html">
+            {% endif %}
+            {% if jekyll.environment != "production" %}
+              <input type="hidden" name="return_to" value="http://localhost:4000/support/thank-you.html">
+            {% endif %}
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Michiel Sikkes">
@@ -53,3 +59,7 @@ title: "Intercity Plans and Pricing"
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  mixpanel.track("Viewed Pro Support License")
+</script>
