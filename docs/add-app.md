@@ -9,7 +9,7 @@ With your app server installed, let's go ahead and create an app on it. There's 
 
 Just click the "New app" button, enter your app's name and you're good to go! In the background, your Intercity instance will prepare all necessities on your app server to host and deploy your app.
 
-<img src="/images/docs-added-app@2x.png" class="img-responsive">
+<img src="/images/docs-added-app@2x.png" class="img-responsive img-thumbnail">
 
 ## Next Step
 

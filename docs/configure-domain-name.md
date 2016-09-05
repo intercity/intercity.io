@@ -11,11 +11,11 @@ After installing your server and adding an app to it, you want your app to be ac
 
 From your app server's apps overview page, go into your app. You'll see the following screen:
 
-<img src="/images/docs-app-details@2x.png" class="img-responsive">
+<img src="/images/docs-app-details@2x.png" class="img-responsive img-thumbnail">
 
 Click on the "Domains" tab under your app name, which will bring you to the page to manage domain names for your app.
 
-<img src="/images/docs-app-domains@2x.png" class="img-responsive">
+<img src="/images/docs-app-domains@2x.png" class="img-responsive img-thumbnail">
 
 To the right you see the "Add a new domain" form. Enter the domain name that you want your app to be accessible on, and click "Add".
 

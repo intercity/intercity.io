@@ -13,7 +13,7 @@ Intercity is a multi-user system so you need to create the first user to get sta
 
 The first user can be created by filling out the form that is displayed right after installing and starting Intercity. Just point your browser to the hostname or ip address of the server where you've installed Intercity and you'll see this screen:
 
-<img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive">
+<img src="/images/initial-setup@2x.png" alt="Initial setup screen" class="img-responsive img-thumbnail">
 
 Enter your email and choose a password and continue to the next step.
 
@@ -23,7 +23,7 @@ It's important that your Intercity dashboard can send emails. This way your user
 
 Right after creating the first user, you'll see the following screen:
 
-<img src="/images/settings@2x.png" class="img-responsive">
+<img src="/images/settings@2x.png" class="img-responsive img-thumbnail">
 
 On this screen, enter an email address that you want Intercity to use as sending email address. You MUST enter valid SMTP settings if you want actual email delivery to work. If you don't have an SMTP server, get one via [Mailgun](https://mailgun.com) or [Postmark](https://postmark.com).
 
