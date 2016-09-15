@@ -44,3 +44,9 @@ After the `git push` finishes, just browse to the domain name of your app and it
 ## Further information
 
 This is the end of this Getting Started guide. If you have any questions or issues with the use of Intercity, please [open an issue on Github](https://github.com/intercity/intercity-next).
+
+{% if jekyll.environment == "production" %}
+<script type="text/javascript">
+fbq('track', 'ReadDocsDeployApp');
+</script>
+{% endif %}
