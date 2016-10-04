@@ -23,4 +23,4 @@ $ cat ~/.ssh/id_rsa.pub | pbcopy
 
 Paste inside the "SSH Key" field and click "Create new deploy key".
 
-Your Intercity instance will now give your machine access to deploy to your app server. Let's **[go ahead and deploy](/docs/deploy-your-app.html)**!
+Your Intercity instance will now give your machine access to deploy to your app server. Let's **[go ahead and deploy](/docs/deploy-app.html)**!
