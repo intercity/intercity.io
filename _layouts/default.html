@@ -9,13 +9,6 @@
 
 {{ content }}
 
-{% if jekyll.environment != "production" %}
-  <div class="container">
-    <hr>
-    <p class="text-center"><b>THIS SAYS "HI!" ONLY IN DEVELOPMENT</b></p>
-  </div>
-{% endif %}
-
 <script>
   mixpanel.track("page viewed", {
     'page name' : document.title,
